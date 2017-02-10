@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta name="viewport" content="width=device-width">
+	<meta charset="UTF-8">
+	<title>Управляемый семисегментный индикатор</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+		window.setInterval(function() {
+			document.img.src="/img/index.jpg?" + new Date().getTime();
+		}, 2001);
+		function removeDis() {
+			if ((document.getElementById("number").value=='') || (document.getElementById("name").value=='')) {
+				alert('Заполните поля!');
+			} else {
+				document.myform.submit();
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="title">
+				Управляемый <span class="live">индикатор</span>
+			</div>
+			<div class="main">
+				<div class="video">
+					<img src="img/index.jpg" alt="Video" name="img">
+					<div class="now">Сейчас горит цифра 9</div>
+					</div>
+				<div class="info">
+					<div class="form">
+						<h1>Я тоже хочу!</h1>
+						<h6>Просто заполни форму и ожидай своей очереди</h6>
+						<form method="POST">
+							<input type="text" placeholder="Ваше имя" required name="name">
+							<input type="number" placeholder="Число 0-9" maxlenght="1" required name="value">
+							<input type="submit" value="Отправить" name="submit">
+						</form>
+					</div>
+					<div class="queue">
+						<div class="queue-title">
+							Онлайн-очередь
+						</div>
+						<div class="queue-block">
+							{% for i in s %}
+								{{ i[0] }}: {{ i[1] }}<br>
+							{% end %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dev">
+				Создание сайта - <a href="https://bixnel.ru">Bixnel</a>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<div class="page-bg"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+.title {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	left: -2px;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 67px;
+	line-height: 100%;
+}
+.live {
+	color: #FF3300;
+}
+.main {
+	width: 100%;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.video {
+	text-align: center;
+	margin-right: 30px;
+}
+.video img {
+	height: 480px;
+	width: 640px;
+}
+.info {
+	text-align: center;
+	margin-left: 30px;
+}
+.form {
+	margin-top: -18px;
+}
+.form h1 {
+	color: #fff;
+	font-size: 53px;
+	font-family: 'Open Sans', sans-serif;
+}
+.form h6 {
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin-top: -40px;
+}
+.form form {
+	margin: 0 auto;
+	height: 105px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+input {
+	text-align: center;
+	font-size: 20px;
+	border: 3px solid rgba(255, 255, 255, .4);
+	border-radius: 5px;
+	background: rgba(255, 255, 255, .3);
+	color: #fff;
+	width: 200px;
+	outline: none;
+}
+input[type='button']:hover {
+	cursor: pointer;
+}
+.queue {
+	margin-top: 40px;
+}
+.queue-title,
+.now {
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+.queue-block {
+	padding: 10px;
+	width: 35%;
+	height: 157px;
+	width: 315px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #333;
+	color: #333;
+	overflow-x: hidden;
+}
+.dev {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 3px;
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+}
+.dev a {
+	color: #fff;
+	text-decoration: none;
+}
+.dev a:hover {
+	text-decoration: underline;
+}
+.overlay {
+	background: #272a3a;
+	opacity: 0.63;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.page-bg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../img/img.jpg) no-repeat 50%;
+	z-index: -2;
+	background-size: cover;
+}
+
+@media (max-width: 1048px) {
+	.video {
+		margin-right: 1px;
+	}
+	.info {
+		margin-left: 1px;
+	}
+}
+@media (max-width: 989px) {
+	.video img {
+		width: 576px;
+		height: 432px;
+	}
+	.video {
+		margin-right: 6px;
+	}
+	.info {
+		margin-left: 6px;
+	}
+}
+@media (max-width: 925px) {
+	.dev {
+		visibility: hidden;
+		display: none;
+	}
+}
+@media (max-width: 576px) {
+	.video img {
+		width: 400px;
+		height: 300px;
+	}
+	.title {
+		font-size: 54px;
+	}
+	.form h1 {
+		font-size: 50px;
+	}
+}
+@media (max-width: 463px) {
+	.title {
+		font-size: 46px;
+	}
+}
+@media (max-width: 404px) {
+	.title {
+		font-size: 38px;
+	}
+	.video img {
+		width: 300px;
+		height: 225px;
+	}
+	.form h1 {
+		font-size: 40px;
+	}
+	.form h6 {
+		font-size: 12px;
+		margin-top: -32px;
+	}
+}
+@media (max-width: 337px) {
+	.title {
+		font-size: 34px;
+	}
+	.queue-block {
+		width: 250px;
+	}
+}
+@media (max-width: 302px) {
+	.title {
+		font-size: 28px;
+	}
+	.video img {
+		width: 220px;
+		height: 165px;
+	}
+	.form h1 {
+		font-size: 30px;
+	}
+	.form h6 {
+		font-size: 12px;
+		margin-top: -25px;
+	}
+}
